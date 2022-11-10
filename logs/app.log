@@ -1,0 +1,336 @@
+2022-11-10 00:13:06,018 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@614207222 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:06,043 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@614207222 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:06,045 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@614207222 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:06,071 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@614207222 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:20,019 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Setting JDBC Connection [HikariProxyConnection@115007211 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:20,037 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Resetting read-only flag of JDBC Connection [HikariProxyConnection@115007211 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:20,308 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-6] Setting JDBC Connection [HikariProxyConnection@584884749 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:20,314 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-6] Resetting read-only flag of JDBC Connection [HikariProxyConnection@584884749 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:20,314 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-6] Setting JDBC Connection [HikariProxyConnection@584884749 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:20,320 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-6] Resetting read-only flag of JDBC Connection [HikariProxyConnection@584884749 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:23,264 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Setting JDBC Connection [HikariProxyConnection@1381946547 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:23,273 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1381946547 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:32,199 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Setting JDBC Connection [HikariProxyConnection@217345004 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:32,209 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Resetting read-only flag of JDBC Connection [HikariProxyConnection@217345004 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:13:32,210 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Setting JDBC Connection [HikariProxyConnection@217345004 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529] read-only
+2022-11-10 00:13:32,218 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Resetting read-only flag of JDBC Connection [HikariProxyConnection@217345004 wrapping com.mysql.cj.jdbc.ConnectionImpl@51864529]
+2022-11-10 00:18:35,771 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Duplicate entry 'admin@example.com' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+2022-11-10 00:18:35,828 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:822)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:346)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.matveyeu.shop.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy4/jdk.proxy4.$Proxy99.save(Unknown Source)
+	at com.matveyeu.shop.service.impl.UserServiceImpl.save(UserServiceImpl.java:36)
+	at com.matveyeu.shop.StartupData.adminAccount(StartupData.java:60)
+	at com.matveyeu.shop.StartupData.run(StartupData.java:33)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:819)
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3297)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3824)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:93)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 28 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin@example.com' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 48 common frames omitted
+2022-11-10 00:19:15,634 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Duplicate entry 'admin@example.com' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+2022-11-10 00:19:15,683 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:822)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:346)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.matveyeu.shop.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy4/jdk.proxy4.$Proxy99.save(Unknown Source)
+	at com.matveyeu.shop.service.impl.UserServiceImpl.save(UserServiceImpl.java:36)
+	at com.matveyeu.shop.StartupData.adminAccount(StartupData.java:60)
+	at com.matveyeu.shop.StartupData.run(StartupData.java:33)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:819)
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3297)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3824)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:93)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 28 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin@example.com' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 48 common frames omitted
+2022-11-10 00:20:16,911 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Duplicate entry 'admin@example.com' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+2022-11-10 00:20:16,967 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:822)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:346)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.matveyeu.shop.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy4/jdk.proxy4.$Proxy99.save(Unknown Source)
+	at com.matveyeu.shop.service.impl.UserServiceImpl.save(UserServiceImpl.java:36)
+	at com.matveyeu.shop.StartupData.adminAccount(StartupData.java:60)
+	at com.matveyeu.shop.StartupData.run(StartupData.java:33)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:819)
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3297)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3824)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:93)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 28 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin@example.com' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 48 common frames omitted
+2022-11-10 00:20:56,466 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@1964923155 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f5c762] read-only
+2022-11-10 00:20:56,487 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1964923155 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f5c762]
+2022-11-10 00:20:56,489 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@1964923155 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f5c762] read-only
+2022-11-10 00:20:56,508 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1964923155 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f5c762]
+2022-11-10 12:24:13,888 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@1159305662 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:13,898 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1159305662 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:13,899 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@1159305662 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:13,908 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1159305662 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:33,015 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@190657463 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:33,026 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@190657463 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:33,142 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Setting JDBC Connection [HikariProxyConnection@1447845463 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:33,145 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1447845463 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:33,146 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Setting JDBC Connection [HikariProxyConnection@1447845463 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:33,150 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1447845463 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:35,051 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@382469631 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:35,056 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@382469631 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:49,216 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Setting JDBC Connection [HikariProxyConnection@239359412 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:49,220 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Resetting read-only flag of JDBC Connection [HikariProxyConnection@239359412 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 12:24:49,221 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Setting JDBC Connection [HikariProxyConnection@239359412 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e] read-only
+2022-11-10 12:24:49,224 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Resetting read-only flag of JDBC Connection [HikariProxyConnection@239359412 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c8c15e]
+2022-11-10 13:33:54,560 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@2050907801 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:33:54,566 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2050907801 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:33:54,568 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@2050907801 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:33:54,575 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2050907801 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:33:59,537 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@414931982 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:33:59,540 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@414931982 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:33:59,541 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@414931982 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:33:59,544 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@414931982 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:02,530 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@406914754 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:02,551 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@406914754 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:02,627 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Setting JDBC Connection [HikariProxyConnection@2019130483 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:02,631 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2019130483 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:02,632 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Setting JDBC Connection [HikariProxyConnection@2019130483 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:02,635 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-8] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2019130483 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:08,956 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Setting JDBC Connection [HikariProxyConnection@355812017 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:08,961 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Resetting read-only flag of JDBC Connection [HikariProxyConnection@355812017 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:08,961 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Setting JDBC Connection [HikariProxyConnection@355812017 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:08,964 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Resetting read-only flag of JDBC Connection [HikariProxyConnection@355812017 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:10,169 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@478684029 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:10,174 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@478684029 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:10,186 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Setting JDBC Connection [HikariProxyConnection@439832172 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:10,190 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Resetting read-only flag of JDBC Connection [HikariProxyConnection@439832172 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:10,191 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Setting JDBC Connection [HikariProxyConnection@439832172 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:10,194 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Resetting read-only flag of JDBC Connection [HikariProxyConnection@439832172 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:10,832 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@1800319176 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:10,835 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1800319176 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:10,847 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@218237443 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:10,851 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@218237443 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:10,851 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@218237443 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:10,853 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@218237443 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:11,745 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Setting JDBC Connection [HikariProxyConnection@1953607107 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:11,750 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1953607107 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:11,761 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@1046020899 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:11,764 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1046020899 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:11,764 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@1046020899 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:11,767 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1046020899 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:32,068 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Setting JDBC Connection [HikariProxyConnection@1706986385 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:32,077 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1706986385 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:40,961 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Setting JDBC Connection [HikariProxyConnection@450787855 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:40,965 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Resetting read-only flag of JDBC Connection [HikariProxyConnection@450787855 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:41,044 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Setting JDBC Connection [HikariProxyConnection@2113782646 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:41,047 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2113782646 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:41,048 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Setting JDBC Connection [HikariProxyConnection@2113782646 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:41,051 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-4] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2113782646 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:42,945 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Setting JDBC Connection [HikariProxyConnection@1431828381 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:42,950 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-7] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1431828381 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:51,354 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@1347124426 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:51,358 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1347124426 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:51,359 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@1347124426 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:51,362 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1347124426 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:53,034 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-6] Setting JDBC Connection [HikariProxyConnection@103369750 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:53,038 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-6] Resetting read-only flag of JDBC Connection [HikariProxyConnection@103369750 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:53,050 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@1525346035 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:53,053 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1525346035 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 13:34:53,054 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Setting JDBC Connection [HikariProxyConnection@1525346035 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc] read-only
+2022-11-10 13:34:53,059 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-5] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1525346035 wrapping com.mysql.cj.jdbc.ConnectionImpl@21c1ebdc]
+2022-11-10 18:16:51,751 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Setting JDBC Connection [HikariProxyConnection@1588116037 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031] read-only
+2022-11-10 18:16:51,758 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1588116037 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031]
+2022-11-10 18:16:51,760 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Setting JDBC Connection [HikariProxyConnection@1588116037 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031] read-only
+2022-11-10 18:16:51,767 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-2] Resetting read-only flag of JDBC Connection [HikariProxyConnection@1588116037 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031]
+2022-11-10 18:16:56,158 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@2098496249 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031] read-only
+2022-11-10 18:16:56,163 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2098496249 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031]
+2022-11-10 18:16:56,164 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Setting JDBC Connection [HikariProxyConnection@2098496249 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031] read-only
+2022-11-10 18:16:56,168 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-9] Resetting read-only flag of JDBC Connection [HikariProxyConnection@2098496249 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031]
+2022-11-10 18:17:07,394 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Setting JDBC Connection [HikariProxyConnection@467641236 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031] read-only
+2022-11-10 18:17:07,400 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Resetting read-only flag of JDBC Connection [HikariProxyConnection@467641236 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031]
+2022-11-10 18:17:07,402 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Setting JDBC Connection [HikariProxyConnection@467641236 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031] read-only
+2022-11-10 18:17:07,409 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-3] Resetting read-only flag of JDBC Connection [HikariProxyConnection@467641236 wrapping com.mysql.cj.jdbc.ConnectionImpl@7297d031]
+2022-11-10 18:18:33,630 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@402177995 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c2405da] read-only
+2022-11-10 18:18:33,637 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@402177995 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c2405da]
+2022-11-10 18:18:33,640 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Setting JDBC Connection [HikariProxyConnection@402177995 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c2405da] read-only
+2022-11-10 18:18:33,647 DEBUG org.springframework.jdbc.datasource.DataSourceUtils [http-nio-8080-exec-1] Resetting read-only flag of JDBC Connection [HikariProxyConnection@402177995 wrapping com.mysql.cj.jdbc.ConnectionImpl@4c2405da]

@@ -1,0 +1,3 @@
+spring-shop-example-matveyeu
+           :: Spring Boot Version :: ${spring-boot.version}
+
