@@ -12,8 +12,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/register")
 public class RegisterController {
     private static final Logger logger = LoggerFactory.getLogger(RegisterController.class);
     private final UserService userService;
@@ -25,14 +27,14 @@ public class RegisterController {
         this.userValidator = userValidator;
     }
 
-    @GetMapping("/register")
+    @GetMapping()
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
         return "register";
     }
 
-    @PostMapping("/register")
+    @PostMapping()
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidator.validate(userForm, bindingResult);
 

@@ -10,12 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
+@RequestMapping("/product")
 public class ProductController {
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
     private final ProductService productService;
@@ -29,7 +27,7 @@ public class ProductController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/product/new")
+    @GetMapping("/new")
     public String newProduct(Model model) {
         model.addAttribute("productForm", new Product());
         model.addAttribute("method", "new");
@@ -37,7 +35,7 @@ public class ProductController {
         return "product";
     }
 
-    @PostMapping("/product/new")
+    @PostMapping("/new")
     public String newProduct(@ModelAttribute("productForm") Product productForm, BindingResult bindingResult, Model model) {
         productValidator.validate(productForm, bindingResult);
 
@@ -52,7 +50,7 @@ public class ProductController {
         return "redirect:/home";
     }
 
-    @GetMapping("/product/edit/{id}")
+    @GetMapping("/edit/{id}")
     public String editProduct(@PathVariable("id") long productId, Model model){
         Product product = productService.findById(productId);
         if (product != null){
@@ -65,7 +63,7 @@ public class ProductController {
         }
     }
 
-    @PostMapping("/product/edit/{id}")
+    @PostMapping("/edit/{id}")
     public String editProduct(@PathVariable("id") long productId, @ModelAttribute("productForm") Product productForm, BindingResult bindingResult, Model model){
         productValidator.validate(productForm, bindingResult);
 
@@ -80,7 +78,7 @@ public class ProductController {
         return "redirect:/home";
     }
 
-    @GetMapping("/product/delete/{id}")
+    @GetMapping("/delete/{id}")
     public String deleteProduct(@PathVariable("id") long productId){
         Product product = productService.findById(productId);
         if (product != null){

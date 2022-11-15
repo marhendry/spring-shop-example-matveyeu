@@ -22,6 +22,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private static final Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
     private final UserRepository userRepository;
 
+    private static final String ROLE_ADMIN = "ROLE_ADMIN";
+    private static final String ROLE_USER = "ROLE_USER";
+
     @Autowired
     public UserDetailsServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -35,9 +38,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (user != null) {
             Set<GrantedAuthority> authorities = new HashSet<>();
             if (Objects.equals(username, "admin")) {
-                authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+                authorities.add(new SimpleGrantedAuthority(ROLE_ADMIN));
             }else {
-                authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+                authorities.add(new SimpleGrantedAuthority(ROLE_USER));
             }
             logger.debug(String.format("User with name: %s and password: %s created.", user.getUsername(), user.getPassword()));
             return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), authorities);

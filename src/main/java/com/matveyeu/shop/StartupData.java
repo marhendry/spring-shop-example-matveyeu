@@ -6,14 +6,15 @@ import com.matveyeu.shop.domain.User;
 import com.matveyeu.shop.repository.CategoryRepository;
 import com.matveyeu.shop.service.ProductService;
 import com.matveyeu.shop.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 
 @Component
+@RequiredArgsConstructor
 public class StartupData implements CommandLineRunner {
     private final UserService userService;
     private final ProductService productService;
@@ -21,22 +22,15 @@ public class StartupData implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(StartupData.class);
 
-   // @Autowired
-    public StartupData(UserService userService, ProductService productService, CategoryRepository categoryRepository) {
-        this.userService = userService;
-        this.productService = productService;
-        this.categoryRepository = categoryRepository;
-    }
-
-    @Override
+       @Override
     public void run(String... args) {
-        adminAccount();
-        userAccount();
-        category();
-        exampleProducts();
+        createInitialAdminAccount();
+        createInitialUserAccount();
+        createInitialCategory();
+        createInitialExampleProducts();
     }
 
-    private void userAccount(){
+    private void createInitialUserAccount(){
         User user = new User();
 
         user.setUsername("user");
@@ -48,7 +42,7 @@ public class StartupData implements CommandLineRunner {
         userService.save(user);
     }
 
-    private void adminAccount(){
+    private void createInitialAdminAccount(){
         User admin = new User();
 
         admin.setUsername("admin");
@@ -60,7 +54,7 @@ public class StartupData implements CommandLineRunner {
         userService.save(admin);
     }
 
-    private void category(){
+    private void createInitialCategory(){
         Category category1 = new Category();
         Category category2 = new Category();
         category1.setId(1);
@@ -72,7 +66,7 @@ public class StartupData implements CommandLineRunner {
         categoryRepository.save(category2);
     }
 
-    private void exampleProducts(){
+    private void createInitialExampleProducts(){
         final String NAME = "Example Name";
         final String IMAGE_URL = "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7389458.jpg";
         final String DESCRIPTION = "Example Description";

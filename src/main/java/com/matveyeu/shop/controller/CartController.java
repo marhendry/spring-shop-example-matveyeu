@@ -9,9 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/cart")
 public class CartController {
     private static final Logger logger = LoggerFactory.getLogger(CartController.class);
     private final ShoppingCartService shoppingCartService;
@@ -23,7 +26,7 @@ public class CartController {
         this.productService = productService;
     }
 
-    @GetMapping("/cart")
+    @GetMapping()
     public String cart(Model model){
         model.addAttribute("products", shoppingCartService.productsInCart());
         model.addAttribute("totalPrice", shoppingCartService.totalPrice());
@@ -31,7 +34,7 @@ public class CartController {
         return "cart";
     }
 
-    @GetMapping("/cart/add/{id}")
+    @GetMapping("/add/{id}")
     public String addProductToCart(@PathVariable("id") long id){
         Product product = productService.findById(id);
         if (product != null){
@@ -41,7 +44,7 @@ public class CartController {
         return "redirect:/home";
     }
 
-    @GetMapping("/cart/remove/{id}")
+    @GetMapping("/remove/{id}")
     public String removeProductFromCart(@PathVariable("id") long id){
         Product product = productService.findById(id);
         if (product != null){
@@ -51,14 +54,14 @@ public class CartController {
         return "redirect:/cart";
     }
 
-    @GetMapping("/cart/clear")
+    @GetMapping("/clear")
     public String clearProductsInCart(){
         shoppingCartService.clearProducts();
 
         return "redirect:/cart";
     }
 
-    @GetMapping("/cart/checkout")
+    @GetMapping("/checkout")
     public String cartCheckout(){
         shoppingCartService.cartCheckout();
 

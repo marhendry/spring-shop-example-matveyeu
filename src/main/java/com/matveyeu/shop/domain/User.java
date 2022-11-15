@@ -3,9 +3,7 @@ package com.matveyeu.shop.domain;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 @Data
@@ -21,6 +19,7 @@ public class User {
     @Column(name = "username", unique = true)
     @NotEmpty
     @NotNull
+    @Size(min = 4, max = 32)
     private String username;
 
     @Column(name = "email", unique = true)
@@ -31,6 +30,7 @@ public class User {
 
     @NotEmpty
     @NotNull
+    @Size(min = 8, max = 32)
     private String password;
 
     @NotEmpty
@@ -44,6 +44,7 @@ public class User {
     private String lastName;
 
     @Column(name = "age")
+    @Min(13)
     private int age;
 
     @Column(name = "city")
